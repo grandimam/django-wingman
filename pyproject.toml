@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wingman"
+version = "0.1.0"
+description = "A reusable django library for managing feature flags with caching."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Fauzan", email = "muqhul@gmail.com" }]
+homepage = "https://github.com/grandimam/wingman"
+repository = "https://github.com/grandimam/wingman"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Django",
+    "Framework :: Django :: 4.0",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+dependencies = [
+    "django>=3.2",
+    "django-simple-history>=2.10",
+]
+
+[tool.setuptools.packages.find]
+where = ["core"]
