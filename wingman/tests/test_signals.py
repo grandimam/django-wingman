@@ -1,6 +1,6 @@
 from django.test import TestCase
 from unittest.mock import patch
-from core.models import WingmanSettings
+from wingman.models import WingmanSettings
 from django.core.cache import cache
 
 
@@ -20,7 +20,7 @@ class TestSignal(TestCase):
     def tearDown(self):
         cache.clear()
 
-    @patch("core.models.WingmanSettings.objects.delete_settings")
+    @patch("wingman.models.WingmanSettings.objects.delete_settings")
     def test_invalidate_cache_on_post_save(self, mock_delete_settings):
         """Test that cache is invalidated on post_save signal."""
         self.setting.value = not self.setting_value
@@ -28,7 +28,7 @@ class TestSignal(TestCase):
 
         mock_delete_settings.assert_called_once_with(self.setting_name)
 
-    @patch("core.models.WingmanSettings.objects.delete_settings")
+    @patch("wingman.models.WingmanSettings.objects.delete_settings")
     def test_invalidate_cache_on_post_delete(self, mock_delete_settings):
         """Test that cache is invalidated on post_delete signal."""
         self.setting.delete()

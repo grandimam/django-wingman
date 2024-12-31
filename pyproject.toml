@@ -5,12 +5,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "wingman"
 version = "0.1.0"
-description = "A reusable django library for managing feature flags with caching."
+description = "A reusable Django library for managing feature flags with caching."
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [{ name = "Fauzan", email = "muqhul@gmail.com" }]
-homepage = "https://github.com/grandimam/wingman"
-repository = "https://github.com/grandimam/wingman"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Framework :: Django",
@@ -21,11 +19,15 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
 ]
-
 dependencies = [
     "django>=3.2",
     "django-simple-history>=2.10",
 ]
+
+# Move the repository and homepage to the [project.urls] section
+[project.urls]
+homepage = "https://grandimam.com"
+repository = "https://github.com/grandimam/wingman"
 
 [tool.setuptools.packages.find]
 where = ["core"]

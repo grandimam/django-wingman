@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import WingmanSettings
+from wingman.models import WingmanSettings
 
 
 @admin.register(WingmanSettings)

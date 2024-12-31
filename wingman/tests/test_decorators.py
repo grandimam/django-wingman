@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.core.cache import cache
-from core.models import WingmanSettings
-from core.decorators import check_feature_flag
+from wingman.models import WingmanSettings
+from wingman.decorators import check_feature_flag
 from unittest.mock import MagicMock
 
 

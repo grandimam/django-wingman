@@ -1,4 +1,4 @@
-from core.models import WingmanSettings
+from wingman.models import WingmanSettings
 
 
 def check_feature_flag(flag_name, alt_value=None, alt_func=None):

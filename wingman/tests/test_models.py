@@ -1,7 +1,7 @@
 from django.test import TestCase
 from unittest.mock import patch
 from django.core.cache import cache
-from core.models import WingmanSettings
+from wingman.models import WingmanSettings
 
 
 class WingmanCacheManagerTestCase(TestCase):

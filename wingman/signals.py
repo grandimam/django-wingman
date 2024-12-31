@@ -1,6 +1,6 @@
 from django.db.models.signals import post_delete
 from django.db.models.signals import post_save
-from core.models import WingmanSettings
+from wingman.models import WingmanSettings
 from django.dispatch import receiver
 
 
