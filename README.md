@@ -1,2 +1,3 @@
-# django-wingman
-Next Django Venture
+# Wingman
+
+Feature flag management for minimalist
